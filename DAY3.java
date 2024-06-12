@@ -77,26 +77,27 @@
 
 //numbers printing
 
-import java.util.*;
-public class DAY3 {
-    public static void Num(int n){
-        if(n==0){
-            return;
-        }
-            Num(n-1);
-        System.out.println(n);
+// import java.util.*;
+// public class DAY3 {
+//     public static void Num(int n){
+//         if(n==0){
+//             return;
+//         }
+//             Num(n-1);
+//         System.out.println(n);
 
-    }
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n= scanner.nextInt();
+//     }
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
+//         int n= scanner.nextInt();
 
-        Num(n);
+//         Num(n);
 
-        scanner.close();
+//         scanner.close();
        
 
-    }
-}
+//     }
+// }
+
 
 
