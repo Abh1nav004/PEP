@@ -1,3 +1,4 @@
+package DAY8;
 import java.util.*;
 public class QueueUsingArray {
    static int arr[] = new int [5];
