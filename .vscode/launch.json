@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "QueueReversal",
+      "request": "launch",
+      "mainClass": "DAY9.QueueReversal",
+      "projectName": "Pep_775173e2"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
