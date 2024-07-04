@@ -80,7 +80,53 @@ public class BST {
             this.insert(arr[i]);
         }
     }
+
+    public void populatedSorted(int[] arr){
+        populatedSorted(arr,0,arr.length);
+    }
+    private void populatedSorted(int[] arr,int s,int e){
+        if(s>e){
+            return;
+        }
+        int mid= (s+e)/2;
+        this.insert(arr[mid]);
+        populatedSorted(arr,s,mid);
+        populatedSorted(arr,mid+1,e);
+    }
      
+    public void preOrder(){
+        preOrder(root);
+    }
+    private void preOrder(Node node){
+        if(node==null){
+            return;
+        }
+        System.out.println(node.value+" ");
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+    public void inOrder(){
+        inOrder(root);
+    }
+    private void inOrder(Node node){
+        if(node==null){
+            return;
+        }
+        inOrder(node.left);
+        System.out.println(node.value+" ");
+        inOrder(node.right);
+    }
+    public void postOrder(){
+        postOrder(root);
+    }
+    private void postOrder(Node node){
+        if(node==null){
+            return;
+        }
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.value+" ");
+    }
     public static void main(String[] args) {
         BST tree = new BST();
         int[] arr ={5,2,7,1,4,6,9,8,3,10};

@@ -1,53 +1,21 @@
-// import java.util.*;
-// public class Test2{
-//     public static void main(String[] args) {
-//         int marks[]=new int[5];
-//         // int numbers[] = {1,2,3};
-//         // int moreNumbers[] = {4,5,6};
-//         // String fruits[] = {"apple","mango","orange"};
-
-//         // System.out.println(marks[0]);
-//         // System.out.println(numbers[0]);
-//         // System.out.println(moreNumbers[0]);
-//         // System.out.println(fruits[0]);
-
-//         Scanner sc = new Scanner(System.in);
-//         for(int i=0;i<marks.length;i++){
-
-//             marks[i]=sc.nextInt();
-//         }
-        
-//         for(int i=0;i<marks.length;i++){
-            
-//             System.out.print(marks[i]+" ");
-//         }
-        
-//         sc.close();
-//     }
-// }
-
-
 import java.util.*;
 public class Test2 {
+    public static boolean threeConsecutiveOdds(int[] arr) {
+        for(int i=0;i<arr.length;i++){
+            for(int j=1;j<arr.length-i;j++){
+                for(int k=2;k<arr.length-i;k++){
+                    if((arr[k]%2!=0 && arr[j]%2!=0 && arr[i]%2!=0) || (arr[i]==1 && arr[j]==1 && arr[k]==1)){
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        int arr[]={1,1,1};
 
-        int n = scanner.nextInt();
-        int arr[] = new int[n];
-        for(int i=0;i<n;i++){
-            arr[i]=scanner.nextInt();
-        }
-        int key = scanner.nextInt();
-        for(int i=0;i<n;i++){
-            if(key==arr[i]){
-                System.out.println("Key found at index: "+i);
-                break;
-            }
-            else{
-                System.out.println("Key not found!");
-            }
-        }
-        scanner.close();
-    } 
+        System.out.println(threeConsecutiveOdds(arr));
+    }
 }
-
